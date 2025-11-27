@@ -1,7 +1,11 @@
-export default function NewNoteForm() {
-    return (    
-        <div>
-            <h1 className="text-2xl font-bold mb-4">page</h1>
-            </div>
-    );
+import { NoteDetail } from "@/app/components/note-detail"
+
+export default async function NoteDetailPage({
+  params,
+}: {
+  params: Promise<{ id: string }>
+}) {
+  const { id } = await params
+
+  return <NoteDetail noteId={id} />
 }

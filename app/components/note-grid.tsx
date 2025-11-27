@@ -51,6 +51,9 @@ export function NoteGrid() {
                     <div key={note.id} className="border p-4 mb-4 rounded shadow">
                         <h2 className="text-xl font-semibold">{note.title}</h2>
                         <p className="text-gray-700">{note.content}</p>
+                        <Link href={`/notes/${note.id}`} className="text-blue-500 hover:underline">
+                            View Details
+                        </Link>
                         </div>
                 ))
             }
